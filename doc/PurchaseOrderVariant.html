@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: PurchaseOrderVariant
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (P)</a> &raquo;
+    
+    
+    <span class="title">PurchaseOrderVariant</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: PurchaseOrderVariant
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">PurchaseOrderVariant</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/models/purchase_order_variant.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<h2>Schema Information</h2>
+
+<p>Table name: purchase_order_variants</p>
+
+<pre class="code ruby"><code>id                :integer(4)      not null, primary key
+purchase_order_id :integer(4)      not null
+variant_id        :integer(4)      not null
+quantity          :integer(4)      not null
+cost              :decimal(8, 2)   not null
+is_received       :boolean(1)      default(FALSE)
+created_at        :datetime
+updated_at        :datetime</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#receive%21-instance_method" title="#receive! (instance method)">- (Object) <strong>receive!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>This method will need a rescue method i assume.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#receive_po-instance_method" title="#receive_po (instance method)">- (Boolean) <strong>receive_po</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>method used by forms to set if the PO is received or not.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#receive_po%3D-instance_method" title="#receive_po= (instance method)">- (none) <strong>receive_po=</strong>(answer) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>in the admin form this is the method called when the form is submitted,.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="receive!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>receive!</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>This method will need a rescue method i assume.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/purchase_order_variant.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_receive!'>receive!</span>
+  <span class='const'>PurchaseOrderVariant</span><span class='period'>.</span><span class='id identifier rubyid_transaction'>transaction</span> <span class='kw'>do</span>
+    <span class='comment'>###  Add to variant stock level
+</span>    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_variant'>variant</span><span class='period'>.</span><span class='id identifier rubyid_inventory'>inventory</span><span class='period'>.</span><span class='id identifier rubyid_count_on_hand'>count_on_hand</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_variant'>variant</span><span class='period'>.</span><span class='id identifier rubyid_inventory'>inventory</span><span class='period'>.</span><span class='id identifier rubyid_count_on_hand'>count_on_hand</span> <span class='op'>+</span> <span class='id identifier rubyid_quantity'>quantity</span>
+    <span class='kw'>if</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_variant'>variant</span><span class='period'>.</span><span class='id identifier rubyid_inventory'>inventory</span><span class='period'>.</span><span class='id identifier rubyid_save!'>save!</span>
+      <span class='comment'>### change is_received to true
+</span>      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_is_received'>is_received</span> <span class='op'>=</span> <span class='kw'>true</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save!'>save!</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='int'>0</span> <span class='op'>==</span> <span class='const'>PurchaseOrderVariant</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='lbrace'>{</span> <span class='symbol'>:purchase_order_variants</span> <span class='op'>=&gt;</span>
+                                              <span class='lbrace'>{</span> <span class='symbol'>:purchase_order_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_purchase_order_id'>purchase_order_id</span><span class='comma'>,</span>
+                                                <span class='symbol'>:is_received</span>       <span class='op'>=&gt;</span> <span class='kw'>false</span>
+                                              <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_purchase_order'>purchase_order</span><span class='period'>.</span><span class='id identifier rubyid_mark_as_complete'>mark_as_complete</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="receive_po-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>receive_po</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>method used by forms to set if the PO is received or not</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt>none</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/purchase_order_variant.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_receive_po'>receive_po</span>
+  <span class='id identifier rubyid_is_received?'>is_received?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="receive_po=-instance_method">
+  
+    - (<tt>none</tt>) <strong>receive_po=</strong>(answer) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>in the admin form this is the method called when the form is submitted,</p>
+
+<pre class="code ruby"><code><span class='const'>The</span> <span class='id identifier rubyid_method'>method</span> <span class='id identifier rubyid_receives'>receives</span> <span class='id identifier rubyid_the'>the</span> <span class='const'>PO</span> <span class='kw'>and</span> <span class='id identifier rubyid_handles'>handles</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_inventory'>inventory</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>for set_keywords in a products form</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>none</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/purchase_order_variant.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_receive_po='>receive_po=</span><span class='lparen'>(</span><span class='id identifier rubyid_answer'>answer</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_answer'>answer</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>true</span><span class='tstring_end'>'</span></span> <span class='op'>||</span> <span class='id identifier rubyid_answer'>answer</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='id identifier rubyid_is_received?'>is_received?</span>
+    <span class='id identifier rubyid_receive!'>receive!</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Sun Jul 15 15:24:26 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

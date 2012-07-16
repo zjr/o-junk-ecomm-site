@@ -1,0 +1,1463 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Address
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (A)</a> &raquo;
+    
+    
+    <span class="title">Address</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Address
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">Address</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/models/address.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<h2>Schema Information</h2>
+
+<p>Table name: addresses</p>
+
+<pre class="code ruby"><code>id                :integer(4)      not null, primary key
+address_type_id   :integer(4)
+first_name        :string(255)
+last_name         :string(255)
+addressable_type  :string(255)     not null
+addressable_id    :integer(4)      not null
+address1          :string(255)     not null
+address2          :string(255)
+city              :string(255)     not null
+state_id          :integer(4)
+state_name        :string(255)
+zip_code          :string(255)     not null
+phone_id          :integer(4)
+alternative_phone :string(255)
+default           :boolean(1)      default(FALSE)
+billing_default   :boolean(1)      default(FALSE)
+active            :boolean(1)      default(TRUE)
+country_id
+created_at        :datetime
+updated_at        :datetime</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#update_address-class_method" title="update_address (class method)">+ (Object) <strong>update_address</strong>(old_address, params, address_type_id = AddressType::SHIPPING_ID) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use this method to update an address</p>
+
+<h1>&gt; This method will create a new address object and make the address you are updating inactive</h1>
+
+<h1>&gt; If you always use this method for updating addresses you don't need to worry about old order</h1>
+
+<h1>&gt; referencing the wrong address.</h1>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#address_attributes-instance_method" title="#address_attributes (instance method)">- (Object) <strong>address_attributes</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>hash of all the address db attributes except created_at, updated_at, id.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#address_lines-instance_method" title="#address_lines (instance method)">- (String) <strong>address_lines</strong>(join_chars = ', ') </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use this method to represent the full address as an array compacted.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cc_params-instance_method" title="#cc_params (instance method)">- (Object) <strong>cc_params</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>hash of all the address attributes to be passed to a creditcard processor.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#city_state_name-instance_method" title="#city_state_name (instance method)">- (String) <strong>city_state_name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use this method to represent the "city, state.abbreviation".</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#city_state_zip-instance_method" title="#city_state_zip (instance method)">- (String) <strong>city_state_zip</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use this method to represent the "city, state.abbreviation zip_code".</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#full_address_array-instance_method" title="#full_address_array (instance method)">- (Array) <strong>full_address_array</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use this method to represent the full address as an array compacted.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inactive%21-instance_method" title="#inactive! (instance method)">- (Object) <strong>inactive!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Will inactivate and save the address.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#name-instance_method" title="#name (instance method)">- (Object) <strong>name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>First and last name of the person on the address.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#save_default_address-instance_method" title="#save_default_address (instance method)">- (Object) <strong>save_default_address</strong>(object, params) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use this method to create an address</p>
+
+<h1>&gt; This method will create a new address object and if the address is a default address it</h1>
+
+<h1>&gt; will make all other addresses that belong to the user non-default.</h1>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shipping_method_ids-instance_method" title="#shipping_method_ids (instance method)">- (Object) <strong>shipping_method_ids</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Method used to determine the shipping methods ids available for this
+address.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shipping_zone_id-instance_method" title="#shipping_zone_id (instance method)">- (Object) <strong>shipping_zone_id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Method used to determine the shipping_zone_id for this address.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#state_abbr_name-instance_method" title="#state_abbr_name (instance method)">- (String) <strong>state_abbr_name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Use this method to represent the state abbreviation.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="update_address-class_method">
+  
+    + (<tt>Object</tt>) <strong>update_address</strong>(old_address, params, address_type_id = AddressType::SHIPPING_ID) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use this method to update an address</p>
+
+<h1>&gt; This method will create a new address object and make the address you are updating inactive</h1>
+
+<h1>&gt; If you always use this method for updating addresses you don't need to worry about old order</h1>
+
+<h1>&gt; referencing the wrong address</h1>
+
+<p>@ return [Address] address of new address or of the old address with errors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>none</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 121</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_update_address'>update_address</span><span class='lparen'>(</span><span class='id identifier rubyid_old_address'>old_address</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='comma'>,</span> <span class='id identifier rubyid_address_type_id'>address_type_id</span> <span class='op'>=</span> <span class='const'>AddressType</span><span class='op'>::</span><span class='const'>SHIPPING_ID</span> <span class='rparen'>)</span>
+  <span class='id identifier rubyid_new_address'>new_address</span> <span class='op'>=</span> <span class='const'>Address</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span> <span class='symbol'>:address_type_id</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_address_type_id'>address_type_id</span><span class='comma'>,</span>
+                            <span class='symbol'>:addressable_type</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_old_address'>old_address</span><span class='period'>.</span><span class='id identifier rubyid_addressable_type'>addressable_type</span><span class='comma'>,</span>
+                            <span class='symbol'>:addressable_id</span>   <span class='op'>=&gt;</span> <span class='id identifier rubyid_old_address'>old_address</span><span class='period'>.</span><span class='id identifier rubyid_addressable_id'>addressable_id</span> <span class='rparen'>)</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_new_address'>new_address</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>if</span> <span class='id identifier rubyid_old_address'>old_address</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_new_address'>new_address</span><span class='period'>.</span><span class='id identifier rubyid_valid?'>valid?</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_new_address'>new_address</span><span class='period'>.</span><span class='id identifier rubyid_save_default_address'>save_default_address</span><span class='lparen'>(</span><span class='id identifier rubyid_old_address'>old_address</span><span class='period'>.</span><span class='id identifier rubyid_addressable'>addressable</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_old_address'>old_address</span><span class='period'>.</span><span class='id identifier rubyid_update_attributes'>update_attributes</span><span class='lparen'>(</span><span class='symbol'>:active</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_new_address'>new_address</span>  <span class='comment'>## return the new address without errors
+</span>  <span class='kw'>else</span>
+    <span class='id identifier rubyid_old_address'>old_address</span><span class='period'>.</span><span class='id identifier rubyid_update_attributes'>update_attributes</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span> <span class='comment'>##  This should always fail
+</span>    <span class='id identifier rubyid_old_address'>old_address</span>  <span class='comment'>## return the old address with errors
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="address_attributes-instance_method">
+  
+    - (<tt>Object</tt>) <strong>address_attributes</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>hash of all the address db attributes except created_at, updated_at, id</p>
+
+<p>@ return [Hash] address db attributes except created_at, updated_at, id</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>none</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_address_attributes'>address_attributes</span>
+  <span class='id identifier rubyid_attributes'>attributes</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='op'>|</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>updated_at</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>created_at</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='id identifier rubyid_k'>k</span> <span class='op'>==</span> <span class='id identifier rubyid_key'>key</span> <span class='rbrace'>}</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="address_lines-instance_method">
+  
+    - (<tt>String</tt>) <strong>address_lines</strong>(join_chars = ', ') 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use this method to represent the full address as an array compacted</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>default</span>
+      
+      
+        <span class='type'>(<tt>Optional String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>is ', '</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>address1 and address2 joined together with the string you pass in</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 181</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_address_lines'>address_lines</span><span class='lparen'>(</span><span class='id identifier rubyid_join_chars'>join_chars</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_address1'>address1</span><span class='comma'>,</span> <span class='id identifier rubyid_address2'>address2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_delete_if'>delete_if</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_add'>add</span><span class='op'>|</span> <span class='id identifier rubyid_add'>add</span><span class='period'>.</span><span class='id identifier rubyid_blank?'>blank?</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='id identifier rubyid_join_chars'>join_chars</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="cc_params-instance_method">
+  
+    - (<tt>Object</tt>) <strong>cc_params</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>hash of all the address attributes to be passed to a creditcard processor</p>
+
+<p>@ return [Hash] address attributes for a creditcard processor</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>none</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_cc_params'>cc_params</span>
+  <span class='lbrace'>{</span> <span class='symbol'>:name</span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
+    <span class='symbol'>:address1</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_address1'>address1</span><span class='comma'>,</span>
+    <span class='symbol'>:address2</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_address2'>address2</span><span class='comma'>,</span>
+    <span class='symbol'>:city</span>     <span class='op'>=&gt;</span> <span class='id identifier rubyid_city'>city</span><span class='comma'>,</span>
+    <span class='symbol'>:state</span>    <span class='op'>=&gt;</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_abbreviation'>abbreviation</span><span class='comma'>,</span>
+    <span class='symbol'>:country</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_country_id'>country_id</span> <span class='op'>==</span> <span class='const'>Country</span><span class='op'>::</span><span class='const'>USA_ID</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>US</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CAN</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+    <span class='symbol'>:zip</span>      <span class='op'>=&gt;</span> <span class='id identifier rubyid_zip_code'>zip_code</span><span class='comment'>#,
+</span>    <span class='comment'>#:phone    =&gt; phone
+</span>  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="city_state_name-instance_method">
+  
+    - (<tt>String</tt>) <strong>city_state_name</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use this method to represent the "city, state.abbreviation"</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt>none</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>"city, state.abbreviation"</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+199
+200
+201</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 199</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_city_state_name'>city_state_name</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_city'>city</span><span class='comma'>,</span> <span class='id identifier rubyid_state_abbr_name'>state_abbr_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="city_state_zip-instance_method">
+  
+    - (<tt>String</tt>) <strong>city_state_zip</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use this method to represent the "city, state.abbreviation zip_code"</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt>none</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>"city, state.abbreviation zip_code"</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 207</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_city_state_zip'>city_state_zip</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_city_state_name'>city_state_name</span><span class='comma'>,</span> <span class='id identifier rubyid_zip_code'>zip_code</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="full_address_array-instance_method">
+  
+    - (<tt>Array</tt>) <strong>full_address_array</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use this method to represent the full address as an array compacted</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt>none</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array has ("name", "address1", "address2"(unless nil), "city state zip")</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+173
+174
+175</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 173</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_full_address_array'>full_address_array</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_address1'>address1</span><span class='comma'>,</span> <span class='id identifier rubyid_address2'>address2</span><span class='comma'>,</span> <span class='id identifier rubyid_city_state_zip'>city_state_zip</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="inactive!-instance_method">
+  
+    - (<tt>Object</tt>) <strong>inactive!</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Will inactivate and save the address</p>
+
+<p>@ return [Boolean] true or error(error will only happen if there is a bad
+record in the db)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>none</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_inactive!'>inactive!</span>
+  <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_active'>active</span> <span class='op'>=</span> <span class='kw'>false</span>
+  <span class='id identifier rubyid_save!'>save!</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="name-instance_method">
+  
+    - (<tt>Object</tt>) <strong>name</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>First and last name of the person on the address</p>
+
+<p>@ return [String] first and last name on the address with a space between</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+        <p class="example_title"><div class='inline'>
+<p>first_name == 'John', last_name == 'Doe'</p>
+</div></p>
+      
+      <pre class="example code">address.name  =&gt; 'John Doe'</pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>none</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='lbracket'>[</span><span class='id identifier rubyid_first_name'>first_name</span><span class='comma'>,</span> <span class='id identifier rubyid_last_name'>last_name</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="save_default_address-instance_method">
+  
+    - (<tt>Object</tt>) <strong>save_default_address</strong>(object, params) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use this method to create an address</p>
+
+<h1>&gt; This method will create a new address object and if the address is a default address it</h1>
+
+<h1>&gt; will make all other addresses that belong to the user non-default</h1>
+
+<p>@ return [Boolean] true or nil</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>object</span>
+      
+      
+        <span class='type'>(<tt>object</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>associated to the address (user or possibly a company in the future)</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>hash</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of attributes for the new address</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 145</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_save_default_address'>save_default_address</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+  <span class='const'>Address</span><span class='period'>.</span><span class='id identifier rubyid_transaction'>transaction</span> <span class='kw'>do</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:default</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0</span><span class='tstring_end'>'</span></span>
+      <span class='const'>Address</span><span class='period'>.</span><span class='id identifier rubyid_update_all'>update_all</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:default</span>  <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rbrace'>}</span><span class='comma'>,</span>
+                          <span class='lbrace'>{</span> <span class='symbol'>:addresses</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+                                <span class='symbol'>:addressable_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+                                <span class='symbol'>:addressable_type</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+                                          <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_object'>object</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:billing_default</span><span class='rbracket'>]</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:billing_default</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>0</span><span class='tstring_end'>'</span></span>
+      <span class='const'>Address</span><span class='period'>.</span><span class='id identifier rubyid_update_all'>update_all</span><span class='lparen'>(</span> <span class='lbrace'>{</span> <span class='symbol'>:billing_default</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rbrace'>}</span><span class='comma'>,</span>
+                          <span class='lbrace'>{</span> <span class='symbol'>:addresses</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span>
+                                <span class='symbol'>:addressable_id</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span><span class='comma'>,</span>
+                                <span class='symbol'>:addressable_type</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+                                          <span class='rbrace'>}</span> <span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_object'>object</span>
+      <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_billing_default'>billing_default</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_addressable'>addressable</span> <span class='op'>=</span> <span class='id identifier rubyid_object'>object</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_save'>save</span>
+
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="shipping_method_ids-instance_method">
+  
+    - (<tt>Object</tt>) <strong>shipping_method_ids</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Method used to determine the shipping methods ids available for this
+address</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+96
+97
+98
+99
+100
+101
+102</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 96</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shipping_method_ids'>shipping_method_ids</span>
+  <span class='kw'>if</span> <span class='const'>HADEAN_CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>require_state_in_address</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_shipping_zone'>shipping_zone</span><span class='period'>.</span><span class='id identifier rubyid_shipping_method_ids'>shipping_method_ids</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_shipping_zone_id'>shipping_zone_id</span> <span class='op'>?</span> <span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_shipping_zone'>shipping_zone</span><span class='period'>.</span><span class='id identifier rubyid_shipping_method_ids'>shipping_method_ids</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="shipping_zone_id-instance_method">
+  
+    - (<tt>Object</tt>) <strong>shipping_zone_id</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Method used to determine the shipping_zone_id for this address</p>
+
+<pre class="code ruby"><code><span class='const'>Specifically</span> <span class='id identifier rubyid_used'>used</span> <span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_determine'>determine</span> <span class='id identifier rubyid_the'>the</span> <span class='id identifier rubyid_order_item'>order_item</span><span class='period'>.</span><span class='id identifier rubyid_shipping_rate_options'>shipping_rate_options</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108
+109
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shipping_zone_id'>shipping_zone_id</span>
+  <span class='kw'>if</span> <span class='const'>HADEAN_CONFIG</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>require_state_in_address</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_shipping_zone_id'>shipping_zone_id</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_country'>country</span><span class='period'>.</span><span class='id identifier rubyid_shipping_zone_id'>shipping_zone_id</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="state_abbr_name-instance_method">
+  
+    - (<tt>String</tt>) <strong>state_abbr_name</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Use this method to represent the state abbreviation</p>
+
+<pre class="code ruby"><code>it is possible the state is nil. in that case the abbreviation will be stored in
+the state_name column in the DB</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'></span>
+      
+      
+        <span class='type'>(<tt>none</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>state abbreviation</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+191
+192
+193</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/address.rb', line 191</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_state_abbr_name'>state_abbr_name</span>
+  <span class='id identifier rubyid_state'>state</span> <span class='op'>?</span> <span class='id identifier rubyid_state'>state</span><span class='period'>.</span><span class='id identifier rubyid_abbreviation'>abbreviation</span> <span class='op'>:</span> <span class='id identifier rubyid_state_name'>state_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Sun Jul 15 15:24:24 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

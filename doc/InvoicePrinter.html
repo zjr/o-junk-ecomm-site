@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: InvoicePrinter
+  
+    &mdash; Documentation by YARD 0.8.2.1
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (I)</a> &raquo;
+    
+    
+    <span class="title">InvoicePrinter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: InvoicePrinter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+      <dt class="r1">Includes:</dt>
+      <dd class="r1">ActionView::Helpers::NumberHelper, <span class='object_link'><a href="MainPrinter.html" title="MainPrinter (module)">MainPrinter</a></span></dd>
+      
+    
+  
+  
+    <dt class="r2">Included in:</dt>
+    <dd class="r2"><span class='object_link'><a href="Admin/Document/InvoicesController.html" title="Admin::Document::InvoicesController (class)">Admin::Document::InvoicesController</a></span></dd>
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/printing/invoice_printer.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#new_page-instance_method" title="#new_page (instance method)">- (Object) <strong>new_page</strong>(pdf, invoice, start_new_page = true) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#order_specific_details-instance_method" title="#order_specific_details (instance method)">- (Object) <strong>order_specific_details</strong>(pdf, invoice) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_bounding_box-instance_method" title="#print_bounding_box (instance method)">- (Object) <strong>print_bounding_box</strong>(pdf, invoice, pdf_info) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_form-instance_method" title="#print_form (instance method)">- (Object) <strong>print_form</strong>(order_invoice) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_invoice_background-instance_method" title="#print_invoice_background (instance method)">- (Object) <strong>print_invoice_background</strong>(pdf, png_background = &quot;#{Rails.root}/public/images/invoice_template.png&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>end of print_form method.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_order_invoice_form-instance_method" title="#print_order_invoice_form (instance method)">- (Object) <strong>print_order_invoice_form</strong>(pdf, invoice, file_to_load = &quot;#{Rails.root}/lib/printing/x_y_locations/invoice.yml&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="MainPrinter.html" title="MainPrinter (module)">MainPrinter</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="MainPrinter.html#check_box-instance_method" title="MainPrinter#check_box (method)">#check_box</a></span>, <span class='object_link'><a href="MainPrinter.html#checker_background-instance_method" title="MainPrinter#checker_background (method)">#checker_background</a></span>, <span class='object_link'><a href="MainPrinter.html#checker_form-instance_method" title="MainPrinter#checker_form (method)">#checker_form</a></span>, <span class='object_link'><a href="MainPrinter.html#print_line-instance_method" title="MainPrinter#print_line (method)">#print_line</a></span>, <span class='object_link'><a href="MainPrinter.html#print_lines-instance_method" title="MainPrinter#print_lines (method)">#print_lines</a></span></p>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="new_page-instance_method">
+  
+    - (<tt>Object</tt>) <strong>new_page</strong>(pdf, invoice, start_new_page = true) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printing/invoice_printer.rb', line 53</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_new_page'>new_page</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span> <span class='id identifier rubyid_start_new_page'>start_new_page</span> <span class='op'>=</span> <span class='kw'>true</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_start_new_page'>start_new_page</span><span class='lparen'>(</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_start_new_page'>start_new_page</span>
+  <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_font'>font</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='rbrace'>}</span><span class='tstring_content'>/lib/printing/fonts/DejaVuSans.ttf</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_print_invoice_background'>print_invoice_background</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_bounding_box'>bounding_box</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>0</span><span class='comma'>,</span><span class='int'>400</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:width</span> <span class='op'>=&gt;</span> <span class='int'>612</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@invoice_yml</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_info'>info</span><span class='op'>|</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>multiple_lines</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_bounding_box'>bounding_box</span><span class='lparen'>(</span>   <span class='lbracket'>[</span>  <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_at</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span>
+                              <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_at</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+                            <span class='rbracket'>]</span><span class='comma'>,</span>
+                              <span class='symbol'>:width</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_by</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span>
+                              <span class='symbol'>:height</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_by</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+                            <span class='rparen'>)</span> <span class='kw'>do</span>
+
+          <span class='id identifier rubyid_print_lines'>print_lines</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span> <span class='rparen'>)</span>
+        <span class='kw'>end</span>
+      <span class='kw'>else</span>
+        <span class='id identifier rubyid_print_line'>print_line</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_info'>info</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span> <span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="order_specific_details-instance_method">
+  
+    - (<tt>Object</tt>) <strong>order_specific_details</strong>(pdf, invoice) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printing/invoice_printer.rb', line 38</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_order_specific_details'>order_specific_details</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_invoice'>invoice</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_order_items'>order_items</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_item'>item</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_new_page'>new_page</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span><span class='rparen'>)</span> <span class='op'>%</span> <span class='int'>3</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>&gt;</span> <span class='int'>1</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_draw_text'>draw_text</span> <span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_variant'>variant</span><span class='period'>.</span><span class='id identifier rubyid_product_name'>product_name</span><span class='comma'>,</span>      <span class='lbrace'>{</span><span class='symbol'>:at</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='int'>130</span><span class='comma'>,</span> <span class='int'>420</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span> <span class='op'>*</span> <span class='int'>50</span><span class='rparen'>)</span> <span class='rbracket'>]</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_draw_text'>draw_text</span> <span class='id identifier rubyid_number_to_currency'>number_to_currency</span><span class='lparen'>(</span><span class='id identifier rubyid_item'>item</span><span class='period'>.</span><span class='id identifier rubyid_price'>price</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:at</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='int'>470</span><span class='comma'>,</span> <span class='int'>420</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span> <span class='op'>*</span> <span class='int'>50</span><span class='rparen'>)</span> <span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_invoice'>invoice</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_shipping_rates'>shipping_rates</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_shipping_rate'>shipping_rate</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_draw_text'>draw_text</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Shipping</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>      <span class='lbrace'>{</span><span class='symbol'>:at</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='int'>130</span><span class='comma'>,</span> <span class='int'>270</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span> <span class='op'>*</span> <span class='int'>15</span><span class='rparen'>)</span> <span class='rbracket'>]</span><span class='rbrace'>}</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_draw_text'>draw_text</span> <span class='id identifier rubyid_shipping_rate'>shipping_rate</span><span class='period'>.</span><span class='id identifier rubyid_rate'>rate</span><span class='comma'>,</span>      <span class='lbrace'>{</span><span class='symbol'>:at</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='int'>470</span><span class='comma'>,</span> <span class='int'>270</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='id identifier rubyid_i'>i</span> <span class='op'>*</span> <span class='int'>15</span><span class='rparen'>)</span> <span class='rbracket'>]</span><span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_draw_text'>draw_text</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='period'>.</span><span class='id identifier rubyid_total_tax_charges'>total_tax_charges</span><span class='comma'>,</span>      <span class='lbrace'>{</span><span class='symbol'>:at</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='int'>480</span><span class='comma'>,</span> <span class='int'>175</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:size</span> <span class='op'>=&gt;</span> <span class='int'>10</span> <span class='rbrace'>}</span>
+
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print_bounding_box-instance_method">
+  
+    - (<tt>Object</tt>) <strong>print_bounding_box</strong>(pdf, invoice, pdf_info) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printing/invoice_printer.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_bounding_box'>print_bounding_box</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span> <span class='id identifier rubyid_pdf_info'>pdf_info</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_bounding_box'>bounding_box</span><span class='lparen'>(</span> <span class='lbracket'>[</span> <span class='id identifier rubyid_pdf_info'>pdf_info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_at</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span>
+                      <span class='id identifier rubyid_pdf_info'>pdf_info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_at</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+                    <span class='rbracket'>]</span><span class='comma'>,</span>
+                    <span class='symbol'>:width</span>  <span class='op'>=&gt;</span> <span class='id identifier rubyid_pdf_info'>pdf_info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_by</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span>
+                    <span class='symbol'>:height</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_pdf_info'>pdf_info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>bounded_by</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+                  <span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span> <span class='id identifier rubyid_pdf_info'>pdf_info</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>arguements</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>method</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span> <span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print_form-instance_method">
+  
+    - (<tt>Object</tt>) <strong>print_form</strong>(order_invoice) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7
+8
+9
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printing/invoice_printer.rb', line 6</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_form'>print_form</span><span class='lparen'>(</span><span class='id identifier rubyid_order_invoice'>order_invoice</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_document'>document</span> <span class='op'>=</span> <span class='const'>Prawn</span><span class='op'>::</span><span class='const'>Document</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pdf'>pdf</span><span class='op'>|</span>
+    <span class='id identifier rubyid_print_order_invoice_form'>print_order_invoice_form</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_order_invoice'>order_invoice</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='comment'>#.render#_file card_name
+</span>  <span class='kw'>end</span> <span class='comment'># end of Prawn::Document.generate
+</span>  <span class='kw'>return</span> <span class='id identifier rubyid_document'>document</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print_invoice_background-instance_method">
+  
+    - (<tt>Object</tt>) <strong>print_invoice_background</strong>(pdf, png_background = &quot;#{Rails.root}/public/images/invoice_template.png&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>end of print_form method</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printing/invoice_printer.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_invoice_background'>print_invoice_background</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_png_background'>png_background</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='rbrace'>}</span><span class='tstring_content'>/public/images/invoice_template.png</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_bounding_box'>bounding_box</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>10</span><span class='comma'>,</span><span class='int'>730</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:width</span> <span class='op'>=&gt;</span> <span class='int'>530</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_image'>image</span> <span class='id identifier rubyid_png_background'>png_background</span><span class='comma'>,</span> <span class='symbol'>:width</span> <span class='op'>=&gt;</span> <span class='int'>519</span> <span class='kw'>if</span> <span class='id identifier rubyid_png_background'>png_background</span>
+  <span class='kw'>end</span>
+  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_bounding_box'>bounding_box</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>20</span><span class='comma'>,</span><span class='int'>720</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:width</span> <span class='op'>=&gt;</span> <span class='int'>120</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_image'>image</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='rbrace'>}</span><span class='tstring_content'>/public/images/logos/</span><span class='embexpr_beg'>#{</span><span class='const'>Image</span><span class='op'>::</span><span class='const'>MAIN_LOGO</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+  <span class='kw'>rescue</span>
+    <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_bounding_box'>bounding_box</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='int'>20</span><span class='comma'>,</span><span class='int'>720</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:width</span> <span class='op'>=&gt;</span> <span class='int'>120</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_draw_text'>draw_text</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>LOGO</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:size</span> <span class='op'>=&gt;</span> <span class='int'>32</span><span class='comma'>,</span> <span class='symbol'>:at</span> <span class='op'>=&gt;</span> <span class='lbracket'>[</span><span class='int'>100</span><span class='comma'>,</span> <span class='int'>100</span><span class='rbracket'>]</span><span class='rbrace'>}</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print_order_invoice_form-instance_method">
+  
+    - (<tt>Object</tt>) <strong>print_order_invoice_form</strong>(pdf, invoice, file_to_load = &quot;#{Rails.root}/lib/printing/x_y_locations/invoice.yml&quot;) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/printing/invoice_printer.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_order_invoice_form'>print_order_invoice_form</span><span class='lparen'>(</span> <span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span>
+                            <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span>
+                            <span class='id identifier rubyid_file_to_load'>file_to_load</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Rails</span><span class='period'>.</span><span class='id identifier rubyid_root'>root</span><span class='rbrace'>}</span><span class='tstring_content'>/lib/printing/x_y_locations/invoice.yml</span><span class='tstring_end'>&quot;</span></span> <span class='rparen'>)</span>
+
+  <span class='ivar'>@invoice_yml</span>    <span class='op'>=</span> <span class='const'>YAML</span><span class='op'>::</span><span class='id identifier rubyid_load'>load</span><span class='lparen'>(</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span> <span class='id identifier rubyid_file_to_load'>file_to_load</span> <span class='rparen'>)</span> <span class='rparen'>)</span>
+  <span class='id identifier rubyid_new_page'>new_page</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='comma'>,</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_order_specific_details'>order_specific_details</span><span class='lparen'>(</span><span class='id identifier rubyid_pdf'>pdf</span><span class='comma'>,</span> <span class='id identifier rubyid_invoice'>invoice</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Sun Jul 15 15:24:22 2012 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
