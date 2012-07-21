@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
     render :template => '/products/index'
   end
 
-  def store
+  def shop
 
   end
 

@@ -33908,3 +33908,1612 @@ Served asset /layout/rails.js - 304 Not Modified (0ms)
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-19 23:46:46 -0700
 Served asset /application.js - 304 Not Modified (5ms)
 Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 19:22:55 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (153.1ms)
+  Rendered shared/_welcome_header.html.erb (290.7ms)
+  Rendered shared/_main_footer.erb (1.6ms)
+Completed 200 OK in 1621ms (Views: 985.1ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:22:57 -0700
+Served asset /ssmain.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:22:57 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:22:57 -0700
+Served asset /layout/application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:22:57 -0700
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:22:57 -0700
+Served asset /layout/rails.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:22:57 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (5ms)
+
+
+Started GET "/store" for 127.0.0.1 at 2012-07-20 19:23:01 -0700
+Processing by ProductsController#store as HTML
+  Rendered products/store.html.erb within layouts/application (1699.4ms)
+  Rendered shared/_welcome_header.html.erb (2.7ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (144.5ms)
+  Rendered layouts/_product_search.html.erb (4.1ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 2015ms (Views: 2012.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /sprite.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /ssmain.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /products_page.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2012-07-20 19:23:04 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/glumptio/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/store" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Processing by ProductsController#store as HTML
+  Rendered products/store.html.erb within layouts/application (2.0ms)
+  Rendered shared/_welcome_header.html.erb (2.3ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (4.0ms)
+  Rendered layouts/_product_search.html.erb (2.1ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 126ms (Views: 124.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /sprite.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:02 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 19:40:05 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.4ms)
+  Rendered shared/_welcome_header.html.erb (2.2ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 112.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:40:05 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:05 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:05 -0700
+Served asset /layout/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:05 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:05 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:05 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/store" for 127.0.0.1 at 2012-07-20 19:40:06 -0700
+Processing by ProductsController#store as HTML
+  Rendered products/store.html.erb within layouts/application (1.8ms)
+  Rendered shared/_welcome_header.html.erb (1.8ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (4.3ms)
+  Rendered layouts/_product_search.html.erb (1.9ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 117.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /products_page.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:40:07 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/products?product_type_id=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"1"}
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 1 LIMIT 1
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 1 AND "product_types"."rgt" <= 6) ORDER BY "product_types"."lft"[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (1,2,3))
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" IN (1, 5, 6, 2, 3, 4)[0m
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 5 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 5 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 6 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 6 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 3 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.5ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 4 AND (variants.deleted_at IS NULL)[0m
+  Rendered products/index.html.erb within layouts/application (318.1ms)
+  Rendered shared/_welcome_header.html.erb (2.2ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (4.0ms)
+  Rendered layouts/_product_search.html.erb (2.0ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 371ms (Views: 359.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /ssmain.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:41:10 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 19:53:10 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (2.8ms)
+  Rendered shared/_welcome_header.html.erb (3.9ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 49ms (Views: 42.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:53:10 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:53:10 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:53:10 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:53:10 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:53:10 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:53:10 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 19:58:26 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (3.4ms)
+  Rendered shared/_welcome_header.html.erb (2.9ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 51ms (Views: 43.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 19:58:26 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 19:58:26 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 19:58:26 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (87ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:58:26 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 19:58:26 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 19:58:26 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:05:51 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (2.1ms)
+  Rendered shared/_welcome_header.html.erb (196.2ms)
+  Rendered shared/_main_footer.erb (0.8ms)
+Completed 200 OK in 477ms (Views: 308.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:05:53 -0700
+Served asset /ssmain.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:53 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:53 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:53 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:53 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:53 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/shop" for 127.0.0.1 at 2012-07-20 20:05:55 -0700
+Processing by ProductsController#shop as HTML
+  Rendered products/shop.html.erb within layouts/application (2.8ms)
+  Rendered shared/_welcome_header.html.erb (2.4ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (30.7ms)
+  Rendered layouts/_product_search.html.erb (3.0ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 166ms (Views: 164.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:05:55 -0700
+Served asset /sprite.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:05:55 -0700
+Served asset /ssmain.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:05:55 -0700
+Served asset /products_page.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:55 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:56 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:56 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:56 -0700
+Served asset /application.js - 304 Not Modified (85ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:56 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/products?product_type_id=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"1"}
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 1 LIMIT 1[0m
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 1 AND "product_types"."rgt" <= 6) ORDER BY "product_types"."lft"
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (1,2,3))[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" IN (1, 5, 6, 2, 3, 4)
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 5 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 5 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 6 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 6 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 3 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 4 AND (variants.deleted_at IS NULL)
+  Rendered products/index.html.erb within layouts/application (88.8ms)
+  Rendered shared/_welcome_header.html.erb (2.3ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (4.1ms)
+  Rendered layouts/_product_search.html.erb (2.7ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 220ms (Views: 208.2ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /sprite.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:05:59 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:06:01 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.6ms)
+  Rendered shared/_welcome_header.html.erb (2.2ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 124ms (Views: 119.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:06:01 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:01 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:01 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:01 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:01 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:01 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:06:28 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (2.4ms)
+  Rendered shared/_welcome_header.html.erb (1.9ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 125ms (Views: 117.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:06:28 -0700
+Served asset /ssmain.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:28 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:28 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:28 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:28 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:28 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:06:42 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.2ms)
+  Rendered shared/_welcome_header.html.erb (2.1ms)
+  Rendered shared/_main_footer.erb (0.8ms)
+Completed 200 OK in 121ms (Views: 115.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:06:42 -0700
+Served asset /ssmain.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:42 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:42 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:42 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:42 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:42 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:06:55 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (2.3ms)
+  Rendered shared/_welcome_header.html.erb (1.8ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 120ms (Views: 113.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:06:55 -0700
+Served asset /ssmain.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:55 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:55 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:55 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:56 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:06:56 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:07:55 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.2ms)
+  Rendered shared/_welcome_header.html.erb (1.9ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 120ms (Views: 114.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:07:55 -0700
+Served asset /ssmain.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:07:55 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:07:55 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:07:55 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:07:55 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:07:55 -0700
+Served asset /layout/rails.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:08:26 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (2.3ms)
+  Rendered shared/_welcome_header.html.erb (2.0ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 120ms (Views: 114.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:08:26 -0700
+Served asset /ssmain.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:26 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:26 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:26 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:26 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:26 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:08:30 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.2ms)
+  Rendered shared/_welcome_header.html.erb (1.7ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 40.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:08:30 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:30 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:30 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:30 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:30 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:08:30 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:09:06 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (3.8ms)
+  Rendered shared/_welcome_header.html.erb (2.4ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:06 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:06 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:06 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:06 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:06 -0700
+Served asset /application.js - 304 Not Modified (90ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:06 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:09:09 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.1ms)
+  Rendered shared/_welcome_header.html.erb (1.7ms)
+  Rendered shared/_main_footer.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 39.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:09 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:09 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:09 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:09 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:09 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:09 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:09:25 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (3.1ms)
+  Rendered shared/_welcome_header.html.erb (2.1ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 121ms (Views: 112.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:26 -0700
+Served asset /ssmain.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:26 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:26 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:26 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:26 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:26 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:09:28 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.0ms)
+  Rendered shared/_welcome_header.html.erb (1.7ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 110.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:28 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:28 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:28 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:28 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:28 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:28 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/shop" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Processing by ProductsController#shop as HTML
+  Rendered products/shop.html.erb within layouts/application (1.7ms)
+  Rendered shared/_welcome_header.html.erb (2.1ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (3.9ms)
+  Rendered layouts/_product_search.html.erb (1.9ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 123ms (Views: 122.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /sprite.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /products_page.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:41 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (2ms)
+
+
+Started GET "/products?product_type_id=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"1"}
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 1 LIMIT 1
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 1 AND "product_types"."rgt" <= 6) ORDER BY "product_types"."lft"[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (1,2,3))
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" IN (1, 5, 6, 2, 3, 4)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 5 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 5 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 6 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 6 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 3 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 4 AND (variants.deleted_at IS NULL)[0m
+  Rendered products/index.html.erb within layouts/application (40.2ms)
+  Rendered shared/_welcome_header.html.erb (2.0ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (3.7ms)
+  Rendered layouts/_product_search.html.erb (2.1ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 163ms (Views: 153.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /ssmain.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:09:44 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/products?product_type_id=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"1"}
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 1 LIMIT 1[0m
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 1 AND "product_types"."rgt" <= 6) ORDER BY "product_types"."lft"
+  [1m[36mProduct Load (1.1ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (1,2,3))[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" IN (1, 5, 6, 2, 3, 4)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 5 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 5 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 6 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 6 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 3 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 4 AND (variants.deleted_at IS NULL)
+  Rendered products/index.html.erb within layouts/application (120.7ms)
+  Rendered shared/_welcome_header.html.erb (2.0ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (4.0ms)
+  Rendered layouts/_product_search.html.erb (2.6ms)
+  Rendered shared/_main_footer.erb (0.8ms)
+Completed 200 OK in 177ms (Views: 164.2ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /sprite.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:19 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:10:21 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (2.0ms)
+  Rendered shared/_welcome_header.html.erb (2.2ms)
+  Rendered shared/_main_footer.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:22 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:22 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:22 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:22 -0700
+Served asset /layout/application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:22 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:22 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/shop" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Processing by ProductsController#shop as HTML
+  Rendered products/shop.html.erb within layouts/application (1.6ms)
+  Rendered shared/_welcome_header.html.erb (2.2ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (3.7ms)
+  Rendered layouts/_product_search.html.erb (1.7ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /sprite.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /ssmain.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /layout/application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:23 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/products?product_type_id=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"1"}
+  [1m[35mProductType Load (0.2ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 1 LIMIT 1
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 1 AND "product_types"."rgt" <= 6) ORDER BY "product_types"."lft"[0m
+  [1m[35mProduct Load (0.5ms)[0m  SELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (1,2,3))
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" IN (1, 5, 6, 2, 3, 4)[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mVariant Load (0.4ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 5 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 5 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 6 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 6 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 3 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.4ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 4 AND (variants.deleted_at IS NULL)[0m
+  Rendered products/index.html.erb within layouts/application (39.7ms)
+  Rendered shared/_welcome_header.html.erb (1.7ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (3.2ms)
+  Rendered layouts/_product_search.html.erb (1.7ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 88ms (Views: 78.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:26 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:10:49 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (1.8ms)
+  Rendered shared/_welcome_header.html.erb (1.9ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:49 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:49 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:49 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:49 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:49 -0700
+Served asset /layout/rails.js - 304 Not Modified (92ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:49 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/shop" for 127.0.0.1 at 2012-07-20 20:10:50 -0700
+Processing by ProductsController#shop as HTML
+  Rendered products/shop.html.erb within layouts/application (2.9ms)
+  Rendered shared/_welcome_header.html.erb (3.0ms)
+  [1m[35mProductType Load (0.4ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (5.1ms)
+  Rendered layouts/_product_search.html.erb (2.5ms)
+  Rendered shared/_main_footer.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /ssmain.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:10:51 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/shopping/cart_items" for 127.0.0.1 at 2012-07-20 20:11:09 -0700
+Processing by Shopping::CartItemsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (66.0ms)[0m  INSERT INTO "carts" ("created_at", "customer_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Fri, 20 Jul 2012 23:11:09 EDT -04:00], ["customer_id", nil], ["updated_at", Fri, 20 Jul 2012 23:11:09 EDT -04:00], ["user_id", nil]]
+  [1m[36m (197.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mCartItem Load (0.2ms)[0m  SELECT "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = 2 AND (cart_items.active = 't' AND
+ cart_items.item_type_id = 1)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "cart_items" WHERE "cart_items"."cart_id" = 2 AND (cart_items.active = 't' AND
+ cart_items.item_type_id = 2)[0m
+  Rendered shopping/cart_items/index.html.erb within layouts/application (69.5ms)
+  Rendered shared/_welcome_header.html.erb (1.3ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (4.4ms)
+  Rendered layouts/_product_search.html.erb (2.0ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 525ms (Views: 215.2ms | ActiveRecord: 265.0ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shopping_cart_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /shopping_cart_page.css - 200 OK (14ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:10 -0700
+Served asset /layout/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:11:12 -0700
+Processing by WelcomeController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1[0m
+  [1m[35mProduct Load (0.4ms)[0m  SELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position[0m
+  Rendered welcome/index.html.erb within layouts/welcome (1.8ms)
+  Rendered shared/_welcome_header.html.erb (2.6ms)
+  Rendered shared/_main_footer.erb (0.9ms)
+Completed 200 OK in 131ms (Views: 123.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:11:13 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:13 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:13 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:13 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:13 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:13 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/shop" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Processing by ProductsController#shop as HTML
+  Rendered products/shop.html.erb within layouts/application (1.9ms)
+  Rendered shared/_welcome_header.html.erb (2.3ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (4.0ms)
+  Rendered layouts/_product_search.html.erb (2.2ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 134.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /sprite.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /products_page.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:11:14 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/products?product_type_id=9" for 127.0.0.1 at 2012-07-20 20:26:01 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"9"}
+  [1m[36mProductType Load (0.2ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 9 LIMIT 1[0m
+  [1m[35mProductType Load (0.2ms)[0m  SELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 7 AND "product_types"."rgt" <= 8) ORDER BY "product_types"."lft"
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (9))[0m
+  Rendered products/index.html.erb within layouts/application (3.5ms)
+  Rendered shared/_welcome_header.html.erb (1.8ms)
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"
+  Rendered shared/_main_product_tabs.erb (3.1ms)
+  Rendered layouts/_product_search.html.erb (1.9ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 127ms (Views: 122.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:01 -0700
+Served asset /sprite.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:01 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:01 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:01 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:01 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:02 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:02 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:02 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/products?product_type_id=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"1"}
+  [1m[36mProductType Load (0.2ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 1 LIMIT 1[0m
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 1 AND "product_types"."rgt" <= 6) ORDER BY "product_types"."lft"
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (1,2,3))[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" IN (1, 5, 6, 2, 3, 4)
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)
+  [1m[36mVariant Load (0.4ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 5 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 5 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 6 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 6 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.4ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 3 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 4 AND (variants.deleted_at IS NULL)
+  Rendered products/index.html.erb within layouts/application (38.0ms)
+  Rendered shared/_welcome_header.html.erb (1.6ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (3.4ms)
+  Rendered layouts/_product_search.html.erb (1.5ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 154.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /ssmain.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /layout/application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:03 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-20 20:26:07 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (3.4ms)
+  Rendered shared/_welcome_header.html.erb (2.2ms)
+  Rendered shared/_main_footer.erb (0.7ms)
+Completed 200 OK in 130ms (Views: 124.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:08 -0700
+Served asset /ssmain.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:08 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:08 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:08 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:08 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:08 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/shop" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Processing by ProductsController#shop as HTML
+  Rendered products/shop.html.erb within layouts/application (1.5ms)
+  Rendered shared/_welcome_header.html.erb (1.8ms)
+  [1m[36mProductType Load (0.2ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (3.9ms)
+  Rendered layouts/_product_search.html.erb (1.5ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 116ms (Views: 115.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /sprite.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /products_page.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /ssmain.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-20 20:26:11 -0700
+Served asset /application.js - 304 Not Modified (3ms)

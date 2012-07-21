@@ -1,6 +1,11 @@
 
 <% content_for :head do -%>
   <%= stylesheet_link_tag 'products_page.css' %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('#main-nav-shop').addClass('active');
+    });
+  </script>
 <% end %>
 
 <div class="container" style="position:relative;top:112px;padding-top:18px">
