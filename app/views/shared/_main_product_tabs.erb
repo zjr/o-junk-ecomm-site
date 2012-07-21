@@ -1,9 +1,18 @@
-<ul id='main-product-type-tabs'>
-  <% product_types.each do |pt_tab| %>
-    <li> <%= link_to_unless_current pt_tab.name, products_path(:product_type_id => pt_tab.id) %> </li>
-  <% end %>
-</ul>
+<% product_types.each do |pt_tab| %>
+<li> <%= link_to_unless_current pt_tab.name, products_path(:product_type_id => pt_tab.id) %> </li>
+<% end %>
+<li class='shopping_tab'>
+	<%= link_to_unless_current 'My Account', myaccount_overview_path if most_likely_user %> 
+</li>
 
-<ul id='main-myaccount-tabs'>
-    <li class='shopping_tab'>       <%= link_to_unless_current 'My Account', myaccount_overview_path if most_likely_user %> </li>
-</ul>
+<li class="pull-right" id="menu-main-wish">
+    <%= link_to(wish_items_path, :id => 'wish_items_button') do %>
+        <strong> Wish List </strong>
+    <% end %>
+</li>
+
+<li class="pull-right" id="menu-main-cart">
+    <%= link_to(shopping_cart_items_path, :id => 'cart_items_buttons') do %>
+        <strong> Cart </strong>
+    <% end %>
+</li>

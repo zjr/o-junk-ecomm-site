@@ -8,9 +8,9 @@ loop_footer_tabs = {
 
 
 
-<div id="footer_wrapper" class='bp'>
-  <div class="container" id="footer">
-    <ul id='main-footer-tabs'>
+<div class="row" style="margin-left:0;background:#000;position:relative;top:112px;">
+  <div class="container">
+    <ul class="nav nav-pills" id='main-product-type-tabs'>
       <% loop_footer_tabs.each_pair do |tab_name, tab_path| %>
         <li> <%= link_to_unless_current tab_name, tab_path %> </li> <%= '|' unless tab_name == 'About' %>
       <% end %>

@@ -23,24 +23,30 @@
 
 <body >
 
-  <%= render :partial => '/shared/welcome_header'%>
+<%= render :partial => '/shared/welcome_header'%>
 
-  <div id="sub_header_wrapper" class='subnav subnav-fixed'>
-    <ul class="nav nav-pills" id='main-product-type-tabs'>
-      <%= render 'shared/main_product_tabs' %>
-    </ul>
-  </div>
-  <div id="sub_header_wrapper" class='subnav subnav-fixed sublvl2'>
-    <ul class="nav nav-pills" id='main-product-type-tabs'>
-      <%= render '/layouts/product_search' %>
-    </ul>
-  </div>
+<div id="sub_header_wrapper" class='subnav subnav-fixed'>
+  <ul class="nav nav-pills" id='main-product-type-tabs'>
+    <%= render 'shared/main_product_tabs' %>
+  </ul>
+</div>
+<div id="sub_header_wrapper" class='subnav subnav-fixed sublvl2'>
+  <ul class="nav nav-pills" id='main-product-type-tabs'>
+    <%= render '/layouts/product_search' %>
+  </ul>
+</div>
+
+<div class='container' style="position:relative;top:112px">
+
   <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
   <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
 
   <%= render :partial => '/shared/myaccount_subheader' if myaccount_tab %>
 
   <%= yield %>
+
+</div>
+
 
   <%= render 'shared/main_footer' %>
 

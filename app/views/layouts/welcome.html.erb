@@ -5,8 +5,9 @@
     <%= site_name %>: <%= yield :title %>
   </title>
   <%#= stylesheet_link_tag :all %>
-  <%= stylesheet_link_tag 'sprite.css' %>
-  <%= stylesheet_link_tag 'application' %>
+  <!-- <%= stylesheet_link_tag 'application' %>
+  <%= stylesheet_link_tag 'myaccount.css' if myaccount_tab %> -->
+  <%= stylesheet_link_tag 'ssmain.css' %>
     <!--[if lt IE 8]
   <%= stylesheet_link_tag 'ie.css', :media => 'screen, projection'%>
   <![endif]-->
@@ -21,21 +22,16 @@
 
 </head>
 <body >
-<div id='body_wrapper'>
-  <div class="bp">
-    <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
-    <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
-  </div>
-
-    <%= render :partial => '/shared/welcome_header'%>
-
-    <div id='content_wrapper' class='container'>
-      <%= yield %>
-    </div>
-
-</div>
-  <%= render 'shared/main_footer' %>
-  <%= yield :bottom %>
+  
+  <%= render :partial => '/shared/welcome_header'%>
+  
+  <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
+  <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
+  
+  <%= yield %>
+  
+<%= render 'shared/main_footer' %>
+<%= yield :bottom %>
 
   <script>
   jQuery(window).ready(

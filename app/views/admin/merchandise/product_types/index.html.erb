@@ -37,6 +37,7 @@
         <% @product_types.each do |product_type| %>
           <tr class='<%= cycle("odd", "")%>'>
             <td><%= link_to product_type.name, edit_admin_merchandise_product_type_path(product_type) %></td>
+            <td><%= link_to 'Destroy', admin_merchandise_product_type_path(product_type), :confirm => 'Are you sure?', :method => :delete %></td>
           </tr>
         <% end %>
       </table>

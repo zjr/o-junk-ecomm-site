@@ -51,8 +51,8 @@ class Admin::Merchandise::ProductTypesController < Admin::BaseController
   def destroy
     @product_type = ProductType.find(params[:id])
     @product_type.active = false
-    @product_type.save
-
+    @product_type.destroy
+    
     redirect_to :action => :index
   end
 

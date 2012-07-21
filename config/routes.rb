@@ -179,6 +179,8 @@ Hadean::Application.routes.draw do # |map|
     end
   end
 
+  match '/store' => 'products#store'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

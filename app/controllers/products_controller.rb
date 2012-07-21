@@ -22,6 +22,10 @@ class ProductsController < ApplicationController
     render :template => '/products/index'
   end
 
+  def store
+
+  end
+
   def show
     @product = Product.active.find(params[:id])
     form_info
