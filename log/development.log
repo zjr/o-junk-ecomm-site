@@ -63927,3 +63927,363 @@ ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halfling
 
 
   Rendered /home/glumptio/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/products?product_type_id=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Processing by ProductsController#index as HTML
+  Parameters: {"product_type_id"=>"1"}
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."id" = 1 LIMIT 1[0m
+  [1m[35mProductType Load (0.3ms)[0m  SELECT "product_types".* FROM "product_types" WHERE ("product_types"."lft" >= 1 AND "product_types"."rgt" <= 6) ORDER BY "product_types"."lft"
+  [1m[36mProduct Load (0.4ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."active" = 't' AND (product_type_id IN (1,2,3))[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" IN (1, 5, 6, 2, 3, 4)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 1 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mVariant Load (0.3ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 1 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 5 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 5 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 6 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 6 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_id" = 2 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mVariant Load (0.3ms)[0m  SELECT "variants".* FROM "variants" WHERE "variants"."product_id" = 2 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 3 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 3 AND (variants.deleted_at IS NULL)
+  [1m[36mImage Load (0.3ms)[0m  [1mSELECT "images".* FROM "images" WHERE "images"."imageable_id" = 4 AND "images"."imageable_type" = 'Product' ORDER BY position, position LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "variants" WHERE "variants"."product_id" = 4 AND (variants.deleted_at IS NULL)
+  Rendered products/index.html.erb within layouts/application (48.0ms)
+  Rendered shared/_welcome_header.html.erb (2.7ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (4.2ms)
+  Rendered layouts/_product_search.html.erb (1.9ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 181ms (Views: 171.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /products_page.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/zjr.css?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /zjr.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prefix-free.min.js?body=1" for 127.0.0.1 at 2012-07-26 21:19:59 -0700
+Served asset /prefix-free.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/glumptio/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/assets/prodoblurdo.jpg" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+Served asset /prodoblurdo.jpg - 200 OK (8ms)
+
+
+Started GET "/assets/prodorego.jpg" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+Served asset /prodorego.jpg - 200 OK (8ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+Served asset /sprite.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zjr.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+Served asset /zjr.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2012-07-26 21:20:00 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/glumptio/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-26 21:20:36 -0700
+Processing by WelcomeController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT "products".* FROM "products" WHERE "products"."featured" = 't' LIMIT 1
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT "products".* FROM "products" WHERE (products.deleted_at IS NULL) LIMIT 1[0m
+  [1m[35mImage Load (0.3ms)[0m  SELECT "images".* FROM "images" WHERE "images"."imageable_type" = 'Product' AND "images"."imageable_id" IN (1) ORDER BY position, position
+  Rendered welcome/index.html.erb within layouts/welcome (3.0ms)
+  Rendered shared/_welcome_header.html.erb (2.5ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 128ms (Views: 120.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /ssmain.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/zjr.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /zjr.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /layout/application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prefix-free.min.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /prefix-free.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /ssmain.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/zjr.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:37 -0700
+Served asset /zjr.css - 304 Not Modified (0ms)
+
+
+Started GET "/shop" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Processing by ProductsController#shop as HTML
+  Rendered products/shop.html.erb within layouts/application (2.3ms)
+  Rendered shared/_welcome_header.html.erb (1.8ms)
+  [1m[36mProductType Load (0.3ms)[0m  [1mSELECT "product_types".* FROM "product_types" WHERE "product_types"."parent_id" IS NULL ORDER BY "lft"[0m
+  Rendered shared/_main_product_tabs.erb (3.9ms)
+  Rendered layouts/_product_search.html.erb (2.2ms)
+  Rendered shared/_main_footer.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 128.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /sprite.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /ssmain.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/zjr.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /zjr.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery/jquery-1.7.1.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /jquery/jquery-1.7.1.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery/jquery-ui-1.8.17.custom.min.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /jquery/jquery-ui-1.8.17.custom.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/layout/application.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /layout/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/layout/rails.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /layout/rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/prefix-free.min.js?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /prefix-free.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/glumptio/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/assets/sprite.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:48 -0700
+Served asset /sprite.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ssmain.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:49 -0700
+Served asset /ssmain.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/zjr.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:49 -0700
+Served asset /zjr.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/products_page.css?body=1" for 127.0.0.1 at 2012-07-26 21:20:49 -0700
+Served asset /products_page.css - 304 Not Modified (0ms)
+
+
+Started GET "/img/glyphicons-halflings.png" for 127.0.0.1 at 2012-07-26 21:20:49 -0700
+
+ActionController::RoutingError (No route matches [GET] "/img/glyphicons-halflings.png"):
+  actionpack (3.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.6) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.6) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.6) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.6) lib/rails/engine.rb:479:in `call'
+  railties (3.2.6) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.6) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /home/glumptio/.rvm/rubies/ruby-1.9.2-p320/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /home/glumptio/.rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
