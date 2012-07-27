@@ -29,9 +29,12 @@
   <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
   
   <%= yield %>
+
+  <div class="row down40" style="margin-left:0;background:#000;">  
+    <%= render 'shared/main_footer' %>
+  </div>
   
-<%= render 'shared/main_footer' %>
-<%= yield :bottom %>
+  <%= yield :bottom %>
 
   <script>
   jQuery(window).ready(
@@ -45,6 +48,14 @@
   <%# javascript_include_tag :defaults %>
   <%#= javascript_include_tag 'jquery-1.4.2.min', 'rails' %>
   <%#= javascript_include_tag :all, :cache => true %>
+  <%= javascript_include_tag 'bootstrap-carousel.js' %>
+  <%= javascript_include_tag 'bootstrap-transition.js' %>
+  <%= javascript_include_tag 'prefix-free.min.js' %>  
+  <script type="text/javascript">
+    $('.carousel').carousel({
+      interval: 3000
+    })
+  </script>
 </body>
   <%= yield :below_body %>
 </html>

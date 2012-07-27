@@ -43,7 +43,9 @@ Hadean::Application.configure do
                                 'tables.css',
                                 'cupertino/jquery-ui-1.8.12.custom.css',
                                 'modstyles.css',
-                                'scaffold.css']
+                                'scaffold.css',
+                                'ssmain.css',
+                                'zjr.css']
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false

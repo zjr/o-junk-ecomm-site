@@ -1,5 +1,6 @@
 <% content_for :head do -%>
   <!--<%= stylesheet_link_tag 'home_page.css' %>-->
+  <%= stylesheet_link_tag 'zjr.css' %>
   <script type="text/javascript">
   	$(document).ready(function() {
   		$('#main-nav-home').addClass('active');
@@ -7,37 +8,98 @@
   </script>
 <% end %>
 
-<div class="row" style="position:relative;top:40px;margin-left:0;">
-	<div class="carousel">
-		<img src="http://www.placehold.it/1366x500">
+<div class="row carousel-container down40">
+	<div id="myCarousel" class="carousel slide">
+		<!-- Carousel items -->
+  		<div class="carousel-inner">
+    		<div class="active item">
+    			<img src="http://www.placehold.it/1366x500/ea564c&text=first+slide">
+    		</div>
+    		<div class="item">
+				<img src="http://www.placehold.it/1366x500/651134&text=second+slide">
+			</div>
+    		<div class="item">
+				<img src="http://www.placehold.it/1366x500/7c62a3&text=third+slide">
+			</div>
+  		</div>
 	</div>
 </div>
-<div class="container body welcome" style="position:relative;top:40px">
-	<div class="row" style="margin-bottom:18px">
-		<div class="span12">
-			<img src="http://www.placehold.it/940x40">
+<div class="container down40">
+	<div class="row under18">
+		<div class="span12 callout">
+			<h5>Helvetica terry richardson marfa thundercats, odd future gluten free...</h5>
 		</div>
 	</div>
-	<div class="row" style="margin-bottom:18px">
-		<div class="span4">
-			<img src="http://www.placehold.it/300">
+	<div class="row under18">
+		<div class="span4 f-link-container">
+			<h4 class="f-link upper-header">Video</h4>
+			<div class="f-link icon on">Q</div>
+			<div class="f-link icon off">Q</div>
 		</div>
-		<div class="span4">
-			<img src="http://www.placehold.it/300">
+		<div class="span4 f-link-container">
+			<h4 class="f-link upper-header">Blog</h4>
+			<div class="f-link icon on">&amp;</div>
+			<div class="f-link icon off">&amp;</div>
 		</div>
-		<div class="span4">
-			<img src="http://www.placehold.it/300">
+		<div class="span4 f-link-container">
+			<h4 class="f-link upper-header">New</h4>
+			<div class="f-link icon on">A</div>
+			<div class="f-link icon off">A</div>
 		</div>
 	</div>
-	<div class="row" style="margin-bottom:18px">
+	<div class="row under18">
 		<div class="span8">
-			<img src="http://www.placehold.it/620">
+			<img src="http://www.placehold.it/620&text=Promo+Image">
 		</div>
-		<div class="span4">
-			<img src="http://www.placehold.it/300x620">
+		<div class="span4 engage">
+			<div class="row">
+				<div class="span4 social under18">
+					<h4 class="upper-header under18">Connect With Us</h4>
+					<ul class="list-o-boxes">
+						<li><a href="" alt=""></a></li>
+						<li><a href="" alt=""></a></li>
+						<li><a href="" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4 posts-recent under18">
+					<h4 class="upper-header under18">Latest Posts</h4>
+					<div class="post under18">
+						<img src="http://www.placehold.it/86">
+						<div class="post-container">
+							<h5 class="post-title">Sample ygfqjp Post Title That Is Just Way Too Long And It Should't Be But Here It Is Nonetheless.</h5>
+							<p class="post-excerpt">Lorem Ipsum sat on a dollar and gave a great holler but shortly returned to living in squalor and neverygfqjp became a baller or a shot caller as he had always hoped.</p>
+						</div>
+					</div>
+					<div class="post under18">
+						<img src="http://www.placehold.it/86">
+						<div class="post-container">
+							<h5 class="post-title">Sample Post Title</h5>
+							<p class="post-excerpt">Lorem Ipsum sat on a dollar and gave a great holler but shortly returned to living in squalor and never became a baller or a shot caller as he had always hoped.</p>
+						</div>
+					</div>
+					<div class="post under18">
+						<img src="http://www.placehold.it/86">
+						<div class="post-container">
+							<h5 class="post-title">Sample Post Title</h5>
+							<p class="post-excerpt">Lorem Ipsum sat on a dollar and gave a great holler but shortly returned to living in squalor and never became a baller or a shot caller as he had always hoped.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4 newsletter">
+					<h4 class="upper-header under18">Newsletter</h4>
+					<form class="form-inline">
+						<input type="email" class="input" placeholder="you@example.com">
+						<button type="submit" class="btn">Sign up</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div class="row" style="margin-bottom:18px">
+	<div class="row under18">
 		<div class="span12">
 			<img src="http://www.placehold.it/940x40">
 		</div>

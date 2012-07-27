@@ -1,35 +1,58 @@
 
 <% content_for :head do -%>
-  <%= stylesheet_link_tag 'products_page.css' %>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#main-nav-shop').addClass('active');
-    });
-  </script>
+	<%= stylesheet_link_tag 'products_page.css' %>
+	<%= stylesheet_link_tag 'zjr.css' %>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#main-nav-shop').addClass('active');
+		});
+	</script>
 <% end %>
 
-<div class="container" style="position:relative;top:112px;padding-top:18px">
-  <ol class="row">
-    <% @products.each_with_index do |product, i| %>
-      <li id='product_<%= i %>' class='left-text padding-5 span4'>
-        <div class='interesting_items-image'>
-          <!--<%= link_to  image_tag(product.featured_image(:small)), product_path(product) %>-->
-          <img src="http://www.placehold.it/300">
-        </div>
-
-        <div class='interesting_items-details'><%= product.name %><br/>
-        ( <%= number_to_currency product.price_range.first %>
-          <% if product.price_range? %>
-              to <%= number_to_currency product.price_range.last %>
-          <% end %>)
-        </div>
-      </li>
-    <% end %>
-  </ol>
+<div class="container down112 above18">
+	<div class="row under18">
+		<div class="span12">
+			<img src="//placehold.it/940x40&text=Breadcrumbs">
+		</div>
+	</div>
+	<ol class="row">
+		<% @products.each_with_index do |product, i| %>
+			<%= link_to product_path(product), :class => 'product-index-link' do %>
+				<li id='product_<%= i %>' class='span4 product-index-container under18'>
+					<!--<%= link_to  image_tag(product.featured_image(:small)), product_path(product) %>-->
+					<div class="product-index-img-container">
+						<%= image_tag 'prodorego.jpg', :class => "product-index-img" %>
+					</div>
+					<%= image_tag 'prodoblurdo.jpg', :class => 'product-index-img-blur' %>
+					<div class='product-index-details top'>
+						<p>take a closer look...</p>
+						<button class="btn btn-primary">View Details</button>
+<!-- 						<a href="cart">
+							<button>cart</button>
+						</a>
+						<a href="wishlist">
+							<button>wishlist</button>
+						</a> -->
+					</div>
+					<div class='product-index-details bottom'>
+						<p><%= product.name %></p>
+						<p>
+							<%= number_to_currency product.price_range.first %>
+								<% if product.price_range? %>
+									to 
+								<%= number_to_currency product.price_range.last %>
+							<% end %>
+						</p>
+						<!--<%= raw product.description %>-->
+					</div>
+				</li>
+			<% end %>
+		<% end %>
+	</ol>
 </div>
 
 <!-- <div id='right_side_panel' class='span-6 last'>
-  <div id='right_side_panel_promo' class='span-6 last'>
-    Join our web site and get additional Savings....  <%= image_tag "logos/#{Image::MAIN_LOGO}.png", :alt => 'hadean image.'%>
-  </div>
+	<div id='right_side_panel_promo' class='span-6 last'>
+		Join our web site and get additional Savings....  <%= image_tag "logos/#{Image::MAIN_LOGO}.png", :alt => 'hadean image.'%>
+	</div>
 </div> -->
