@@ -8,7 +8,7 @@
 	</script>
 <% end %>
 
-<div class="row under18">
+<div class="row under20">
 	<div class="span12">
 		<img src="//placehold.it/940x40&text=Breadcrumbs">
 	</div>
@@ -16,7 +16,7 @@
 <ol class="row">
 	<% @products.each_with_index do |product, i| %>
 		<%= link_to product_path(product), :class => 'product-index-link' do %>
-			<li id='product_<%= i %>' class='span4 product-index-container under18'>
+			<li id='product_<%= i %>' class='span4 product-index-container under20'>
 				<!--<%= link_to  image_tag(product.featured_image(:small)), product_path(product) %>-->
 				<div class="product-index-img-container">
 					<%= image_tag 'prodorego.jpg', :class => "product-index-img" %>

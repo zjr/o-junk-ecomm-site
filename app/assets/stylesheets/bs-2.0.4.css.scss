@@ -4869,7 +4869,7 @@ h5, h6 {
   top: 112px;
 }
 
-.under18 {
+.under20 {
   margin-bottom: 20px;
 }
 
@@ -4894,7 +4894,7 @@ h5, h6 {
 
 .upper-header {
   color: #333333;
-  font-size: 12px;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -4946,7 +4946,7 @@ h5, h6 {
   border-bottom: 1px dashed #333333;
 }
 .callout h5 {
-  font-size: 12px;
+  font-size: 13px;
   line-height: 40px;
   text-align: center;
 }
@@ -5002,7 +5002,7 @@ h5, h6 {
   position: absolute;
   top: 40px;
   right: 0px;
-  padding: 0 18px;
+  padding: 0 13px;
 }
 
 .engage .social, .engage .newsletter, .engage .posts-recent {
@@ -5015,24 +5015,32 @@ h5, h6 {
   height: 380px;
 }
 .engage .upper-header {
-  line-height: 24px;
-  font-size: 24px;
+  line-height: 26px;
+  font-size: 32px;
 }
 
 .list-o-boxes {
   list-style: none;
-  width: 129px;
+  width: 126px;
   margin: auto;
   display: block;
 }
 .list-o-boxes li {
   float: left;
-  width: 37px;
-  height: 37px;
-  background: #cccccc;
+  width: 36px;
+  height: 36px;
+  padding: 2px;
+  position: relative;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  transition: 0.2s all ease-in-out;
 }
 .list-o-boxes li + li {
   margin-left: 9px;
+}
+.list-o-boxes li:hover {
+  top: -6px;
 }
 
 .newsletter form {
@@ -5047,8 +5055,9 @@ h5, h6 {
 }
 
 .post {
-  height: 96px;
+  height: 100px;
   border-top: 1px dashed #333333;
+  margin-bottom: 10px;
 }
 .post img {
   height: 86px;
@@ -5065,10 +5074,11 @@ h5, h6 {
   float: left;
 }
 .post .post-title {
-  line-height: 9px;
-  margin-bottom: 7px;
+  line-height: 13px;
+  margin-bottom: 4px;
   width: 187px;
-  height: 11px;
+  height: 15px;
+  font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
