@@ -45,7 +45,7 @@ Hadean::Application.configure do
                                 'modstyles.css',
                                 'scaffold.css',
                                 'ssmain.css',
-                                'zjr.css']
+                                'bs-2.0.4']
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
