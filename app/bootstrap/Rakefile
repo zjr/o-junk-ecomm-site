@@ -10,10 +10,10 @@ end
 require 'rake'
 
 VERSION = "2.0.4"
-BOOTSTRAP_CSS = "../assets/stylesheets/_bs-#{VERSION}.css"
-BOOTSTRAP_MIN_CSS = "../assets/stylesheets/_bs-#{VERSION}.min.css"
-BOOTSTRAP_RESPONSIVE_CSS = "../assets/stylesheets/_bs-responsive-#{VERSION}.css"
-BOOTSTRAP_RESPONSIVE_MIN_CSS = "../assets/stylesheets/_bs-responsive-#{VERSION}.min.css"
+BOOTSTRAP_CSS = "../assets/stylesheets/bs-#{VERSION}.css.scss"
+BOOTSTRAP_MIN_CSS = "../assets/stylesheets/bs-#{VERSION}.min.css"
+BOOTSTRAP_RESPONSIVE_CSS = "../assets/stylesheets/bs-responsive-#{VERSION}.css"
+BOOTSTRAP_RESPONSIVE_MIN_CSS = "../assets/stylesheets/bs-responsive-#{VERSION}.min.css"
 
 SASS_COMMAND = "sass --precision 10 --load-path lib --style"
 
