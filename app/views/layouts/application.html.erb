@@ -35,12 +35,14 @@
       <%= render '/layouts/product_search' %>
     </ul>
   </div>
-  <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
-  <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
 
   <%= render :partial => '/shared/myaccount_subheader' if myaccount_tab %>
 
-  <%= yield %>
+  <div class="container down112">
+    <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
+    <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
+    <%= yield %>
+  </div>
 
   <div class="row down112" style="margin-left:0;background:#000;">
     <%= render 'shared/main_footer' %>

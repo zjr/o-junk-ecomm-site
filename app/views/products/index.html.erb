@@ -8,47 +8,45 @@
 	</script>
 <% end %>
 
-<div class="container down112 above18">
-	<div class="row under18">
-		<div class="span12">
-			<img src="//placehold.it/940x40&text=Breadcrumbs">
-		</div>
+<div class="row under18">
+	<div class="span12">
+		<img src="//placehold.it/940x40&text=Breadcrumbs">
 	</div>
-	<ol class="row">
-		<% @products.each_with_index do |product, i| %>
-			<%= link_to product_path(product), :class => 'product-index-link' do %>
-				<li id='product_<%= i %>' class='span4 product-index-container under18'>
-					<!--<%= link_to  image_tag(product.featured_image(:small)), product_path(product) %>-->
-					<div class="product-index-img-container">
-						<%= image_tag 'prodorego.jpg', :class => "product-index-img" %>
-					</div>
-					<%= image_tag 'prodoblurdo.jpg', :class => 'product-index-img-blur' %>
-					<div class='product-index-details top'>
-						<p>take a closer look...</p>
-						<button class="btn btn-primary">View Details</button>
-<!-- 						<a href="cart">
-							<button>cart</button>
-						</a>
-						<a href="wishlist">
-							<button>wishlist</button>
-						</a> -->
-					</div>
-					<div class='product-index-details bottom'>
-						<p><%= product.name %></p>
-						<p>
-							<%= number_to_currency product.price_range.first %>
-								<% if product.price_range? %>
-									to 
-								<%= number_to_currency product.price_range.last %>
-							<% end %>
-						</p>
-						<!--<%= raw product.description %>-->
-					</div>
-				</li>
-			<% end %>
-		<% end %>
-	</ol>
 </div>
+<ol class="row">
+	<% @products.each_with_index do |product, i| %>
+		<%= link_to product_path(product), :class => 'product-index-link' do %>
+			<li id='product_<%= i %>' class='span4 product-index-container under18'>
+				<!--<%= link_to  image_tag(product.featured_image(:small)), product_path(product) %>-->
+				<div class="product-index-img-container">
+					<%= image_tag 'prodorego.jpg', :class => "product-index-img" %>
+				</div>
+				<%= image_tag 'prodoblurdo.jpg', :class => 'product-index-img-blur' %>
+				<div class='product-index-details top'>
+					<p>take a closer look...</p>
+					<button class="btn btn-primary">View Details</button>
+<!-- 						<a href="cart">
+						<button>cart</button>
+					</a>
+					<a href="wishlist">
+						<button>wishlist</button>
+					</a> -->
+				</div>
+				<div class='product-index-details bottom'>
+					<p><%= product.name %></p>
+					<p>
+						<%= number_to_currency product.price_range.first %>
+							<% if product.price_range? %>
+								to 
+							<%= number_to_currency product.price_range.last %>
+						<% end %>
+					</p>
+					<!--<%= raw product.description %>-->
+				</div>
+			</li>
+		<% end %>
+	<% end %>
+</ol>
 
 <!-- <div id='right_side_panel' class='span-6 last'>
 	<div id='right_side_panel_promo' class='span-6 last'>
