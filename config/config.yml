@@ -33,7 +33,7 @@ development: &non_production_settings
 test:
   <<: *non_production_settings
 production:
-  encryption_key: someRandomBINARYKEY
+  encryption_key: "\x8D\xFE;\x83\x84c\x88.\x10\xD5\xF8=:\x8EG["
   mailer:
     server: mail.example.com
     username: someLOGIN
