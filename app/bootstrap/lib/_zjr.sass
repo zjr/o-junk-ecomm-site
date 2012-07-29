@@ -24,6 +24,45 @@ h5, h6
 		transition: color 0.2s linear
 		&:hover
 			color: lighten($purple, 5%)
+.navbar
+	li
+		a i
+			opacity: 0.5
+		&:hover > a i
+			opacity: 1
+		&.active > a i
+			opacity: 1
+	li.no-link
+		padding: 9px 0 0 10px
+		color: #999
+		a
+			color: saturate(lighten($purple, 20%), 50%)
+
+.login-form
+	right: 54px !important
+	padding: 0 12px
+	form
+		margin: 0 0 9px
+	legend
+		text-align: center
+		margin-bottom: 0
+		line-height: 40px
+		& + .control-group
+			margin: 6px auto 0
+	.control-group
+		margin-bottom: 0
+	input
+		height: 24px
+	.btn
+		box-sizing: content-box
+		margin: auto
+	a
+		text-align: center
+
+
+
+.divider-vertical.no-left
+	margin-left: 0
 
 .upper-header
 	color: #333
@@ -36,6 +75,8 @@ h5, h6
 	position: relative
 	&.down40
 		margin-top: 0px
+.carousel .item > img
+	margin: auto
 .carousel-nav
 	position: absolute
 	z-index: 1

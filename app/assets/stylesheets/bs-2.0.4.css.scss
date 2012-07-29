@@ -1714,7 +1714,7 @@ table .span24 {
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("/icons/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -1724,7 +1724,7 @@ table .span24 {
 }
 
 .icon-white {
-  background-image: url("../img/glyphicons-halflings-white.png");
+  background-image: url("/icons/glyphicons-halflings-white.png");
 }
 
 .icon-glass {
@@ -3662,7 +3662,7 @@ input[type="submit"].btn.btn-mini {
 
 .navbar .divider-vertical {
   height: 40px;
-  width: 1px;
+  width: 2px;
   margin: 0 9px;
   overflow: hidden;
   background-color: #222222;
@@ -4892,6 +4892,56 @@ h5, h6 {
   color: #8753c0;
 }
 
+.navbar li a i {
+  opacity: 0.5;
+}
+.navbar li:hover > a i {
+  opacity: 1;
+}
+.navbar li.active > a i {
+  opacity: 1;
+}
+.navbar li.no-link {
+  padding: 9px 0 0 10px;
+  color: #999999;
+}
+.navbar li.no-link a {
+  color: #ac63fc;
+}
+
+.login-form {
+  right: 54px !important;
+  padding: 0 12px;
+}
+.login-form form {
+  margin: 0 0 9px;
+}
+.login-form legend {
+  text-align: center;
+  margin-bottom: 0;
+  line-height: 40px;
+}
+.login-form legend + .control-group {
+  margin: 6px auto 0;
+}
+.login-form .control-group {
+  margin-bottom: 0;
+}
+.login-form input {
+  height: 24px;
+}
+.login-form .btn {
+  box-sizing: content-box;
+  margin: auto;
+}
+.login-form a {
+  text-align: center;
+}
+
+.divider-vertical.no-left {
+  margin-left: 0;
+}
+
 .upper-header {
   color: #333333;
   font-size: 24px;
@@ -4905,6 +4955,10 @@ h5, h6 {
 }
 .carousel-container.down40 {
   margin-top: 0px;
+}
+
+.carousel .item > img {
+  margin: auto;
 }
 
 .carousel-nav {

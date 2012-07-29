@@ -11,7 +11,7 @@
           <a href="/"><strong>Home</strong></a>
         </li>
         <li class="" id="main-nav-about">
-          <a href="#/about"><strong>About</strong></a>
+          <a href="/about"><strong>About</strong></a>
         </li>
         <li class="" id="main-nav-contact">
           <a href="#/contact"><strong>Contact</strong></a>
@@ -20,11 +20,37 @@
           <a href="#/blog"><strong>Blog</strong></a>
         </li>
         <li class="" id="main-nav-shop">
-          <a href="/shop"><strong>Shop</strong></a>
+          <a href="/shop"><i class="icon-shopping-cart icon-white"></i>&nbsp;<strong>Shop</strong></a>
         </li>
-        <li class="" id="menu-main-user">
+        <li class="divider-vertical no-left"></li>
+        <li class="no-link" id="menu-main-user">
             <% unless most_likely_user %>
-              <strong><%= link_to 'Login',  login_path %></strong> or
+              <strong>
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Login</a> 
+                <div class="dropdown-menu login-form">                   
+                <%= form_for  @user_session, :as => :user_session,
+                  :url => user_sessions_path(@user_session),
+                  :html => {:class => ''} do |form| %>
+                      <fieldset>
+                            <legend>Log in</legend>
+                              <div class="control-group">
+                                  <%=form.label :email, 'Email', :class => 'control-label' %>
+                                  <div class="controls">
+                                    <%= form.email_field :email, :autocomplete => 'off', :autocapitalize => 'off', :class => 'input-medium' %>
+                                  </div>
+                              </div>
+                              <div class="control-group">
+                                  <%=form.label :password, 'Password', :class => 'control-label' %>
+                                  <div class="controls">
+                                    <%= form.password_field :password, :autocomplete => 'off', :autocapitalize => 'off', :class => 'input-medium' %>
+                                  </div>
+                              </div>
+                              <%= form.submit "Login", :class => 'btn btn-large btn-primary' %>
+                    <%= link_to 'forgot password?', new_customer_password_reset_path() %>
+                      </fieldset>
+                    <% end %>
+                </div>
+              </strong> or
               <span><%= link_to 'Sign up', signup_path %></span>
             <% else %>
               <strong>Hi <%= most_likely_user.first_name %></strong>
