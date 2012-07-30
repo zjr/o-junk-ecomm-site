@@ -32,23 +32,24 @@
                   :url => user_sessions_path(@user_session),
                   :html => {:class => ''} do |form| %>
                       <fieldset>
-                            <legend>Log in</legend>
-                              <div class="control-group">
-                                  <%=form.label :email, 'Email', :class => 'control-label' %>
-                                  <div class="controls">
-                                    <%= form.email_field :email, :autocomplete => 'off', :autocapitalize => 'off', :class => 'input-medium' %>
-                                  </div>
-                              </div>
-                              <div class="control-group">
-                                  <%=form.label :password, 'Password', :class => 'control-label' %>
-                                  <div class="controls">
-                                    <%= form.password_field :password, :autocomplete => 'off', :autocapitalize => 'off', :class => 'input-medium' %>
-                                  </div>
+                            <div class="control-contain">
+                                <div class="control-group">
+                                    <div class="controls">
+                                      <%= form.email_field :email, :autocomplete => 'off', :autocapitalize => 'off', :class => 'input-medium', :placeholder => 'Your email address' %>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="controls">
+                                      <%= form.password_field :password, :autocomplete => 'off', :autocapitalize => 'off', :class => 'input-medium', :placeholder => "Your password" %>
+                                    </div>
+                                </div>
                               </div>
                               <%= form.submit "Login", :class => 'btn btn-large btn-primary' %>
-                    <%= link_to 'forgot password?', new_customer_password_reset_path() %>
                       </fieldset>
                     <% end %>
+                    
+                              <div class="divider"></div>
+                          <%= link_to 'forgot password?', new_customer_password_reset_path() %>
                 </div>
               </strong> or
               <span><%= link_to 'Sign up', signup_path %></span>
