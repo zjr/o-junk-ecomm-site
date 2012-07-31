@@ -1,7 +1,10 @@
-<%= form_for search_product, :html => {:class => 'navbar-form pull-right'} do %>
+<%= form_for search_product, :html => {:class => 'form-search pull-right'} do %>
   <div class="field search">
-    <span class="icon-search"></span>
-    <%= text_field_tag 'q', nil , :class => 'input-search text', :id => 'term' %>
-    <%= submit_tag 'Go',          :class => 'button spade' %>
+    <%= text_field_tag 'q', nil , 
+    	:class => 'input-medium search-query', 
+    	:id => 'term',
+    	:placeholder => 'search' %>
+    <%= submit_tag 'ô', :class => 'btn' %>
+    	<!-- <span class="icon-search"></span> -->
   </div>
 <% end %>

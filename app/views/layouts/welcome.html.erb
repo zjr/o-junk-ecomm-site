@@ -25,9 +25,6 @@
   
   <%= render :partial => '/shared/welcome_header'%>
   
-  <%= raw "<p class='flash_notice'> #{notice}</p>"  if notice %>
-  <%= raw "<p class='flash_error'>#{alert}</p>"     if alert %>
-  
   <%= yield %>
 
   <div class="row down40" style="margin-left:0;background:#000;">  

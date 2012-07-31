@@ -30,11 +30,6 @@
       <%= render 'shared/main_product_tabs' %>
     </ul>
   </div>
-  <div id="sub_header_wrapper" class='subnav subnav-fixed sublvl2'>
-    <ul class="nav nav-pills" id='main-product-type-tabs'>
-      <%= render '/layouts/product_search' %>
-    </ul>
-  </div>
 
   <%= render :partial => '/shared/myaccount_subheader' if myaccount_tab %>
 
@@ -64,6 +59,7 @@
   <%#= javascript_include_tag :all, :cache => true %>
   <%= javascript_include_tag 'bootstrap-carousel.js' %>
   <%= javascript_include_tag 'bootstrap-transition.js' %>
+  <%= javascript_include_tag 'bootstrap-dropdown.js' %>
   <%= javascript_include_tag 'prefix-free.min.js' %>  
   <script type="text/javascript">
     $('.carousel').carousel({

@@ -4,15 +4,6 @@
 <li class='shopping_tab'>
 	<%= link_to_unless_current 'My Account', myaccount_overview_path if most_likely_user %> 
 </li>
-
-<li class="pull-right" id="menu-main-wish">
-    <%= link_to(wish_items_path, :id => 'wish_items_button') do %>
-        <strong> Wish List </strong>
-    <% end %>
-</li>
-
-<li class="pull-right" id="menu-main-cart">
-    <%= link_to(shopping_cart_items_path, :id => 'cart_items_buttons') do %>
-        <strong> Cart </strong>
-    <% end %>
+<li class="pull-right">
+    <%= render '/layouts/product_search' %>
 </li>
